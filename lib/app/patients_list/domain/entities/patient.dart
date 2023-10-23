@@ -1,27 +1,27 @@
 class Patient {
-  String name;
-  int age;
-  String cpf;
-  String rg;
-  String birthDate;
-  String gender;
-  String zodiacSign;
-  String motherName;
-  String fatherName;
-  String email;
-  // String password;
-  String cep;
-  String address;
-  int houseNumber;
-  String neighborhood;
-  String city;
-  String state;
-  String landlinePhone;
-  String mobilePhone;
-  String height;
-  int weight;
-  String bloodType;
-  String color;
+  final String name;
+  final int age;
+  final String cpf;
+  final String rg;
+  final String birthDate;
+  final String gender;
+  final String zodiacSign;
+  final String motherName;
+  final String fatherName;
+  final String email;
+  // final String password;
+  final String cep;
+  final String address;
+  final int houseNumber;
+  final String neighborhood;
+  final String city;
+  final String state;
+  final String landlinePhone;
+  final String mobilePhone;
+  final String height;
+  final int weight;
+  final String bloodType;
+  final String color;
 
   Patient({
     required this.name,
@@ -75,5 +75,11 @@ class Patient {
       bloodType: json['tipo_sanguineo'],
       color: json['cor'],
     );
+  }
+
+  static List<Patient> fromJsonList(List<dynamic> jsonList) {
+    return jsonList
+        .map((json) => Patient.fromJson(json as Map<String, dynamic>))
+        .toList();
   }
 }
