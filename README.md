@@ -1,16 +1,24 @@
-# patients_list
+# Patients List
 
-A new Flutter project.
+Este projeto é uma aplicação para listagem de pacientes, com a possibilidade de adição de filtros para refinar os resultados. Como exemplo de funcionalidade, foi implementado um filtro baseado no sexo dos pacientes. A aplicação utiliza a biblioteca [Flutter Bloc](https://pub.dev/packages/flutter_bloc) para gerenciamento e controle de estado, garantindo uma experiência fluída e reativa ao usuário.
 
-## Getting Started
+## Arquitetura
 
-This project is a starting point for a Flutter application.
+O projeto adota a arquitetura [Clean Dart](https://github.com/Flutterando/Clean-Dart), estruturando-se nas seguintes camadas:
 
-A few resources to get you started if this is your first Flutter project:
+- **Data**: Esta camada é responsável pela obtenção dos dados, seja através de APIs, bancos de dados ou outros meios. Nela, você encontrará o código relacionado ao acesso e recuperação dos dados dos pacientes.
+  
+- **Domain**: Esta camada define as entidades e regras de negócio da aplicação. Ela atua como uma ponte entre a camada de dados e a camada de apresentação, garantindo que os dados sejam processados de acordo com as regras estabelecidas.
+  
+- **Presentation**: É aqui que a lógica da interface do usuário está localizada. Esta camada determina como os dados serão exibidos ao usuário e como ele poderá interagir com eles.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Integração com a API do GitHub
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+O projeto utiliza o pacote [http](https://pub.dev/packages/http) para consumir a API do GitHub. Especificamente, ele recupera informações dos pacientes a partir de um arquivo JSON hospedado no repositório do GitHub. Esta implementação permite que a aplicação busque dados em tempo real do repositório, proporcionando flexibilidade para atualizações e manutenções.
+
+## Funcionalidades
+
+- **Listagem de Pacientes**: O aplicativo recupera e lista informações detalhadas sobre os pacientes de um arquivo JSON hospedado no GitHub.
+  
+- **Filtragem de Pacientes**: O usuário tem a possibilidade de filtrar os pacientes listados com base em critérios específicos. Atualmente, como demonstração, há um filtro implementado para refinar a lista com base no sexo do paciente.
+  
