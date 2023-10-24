@@ -1,4 +1,4 @@
-import 'package:teste_tecnico_anlix/app/patients_list/domain/entities/patient.dart';
+import 'package:patients_list/app/patients_list/domain/entities/patient.dart';
 
 abstract class PatientsListState {}
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:teste_tecnico_anlix/app/patients_list/data/repositories/patients_list_repository.dart';
-import 'package:teste_tecnico_anlix/app/patients_list/domain/blocs/patients_list_cubit.dart';
-import 'package:teste_tecnico_anlix/app/patients_list/presentation/patients_list_page.dart';
+import 'package:patients_list/app/patients_list/data/repositories/patients_list_repository.dart';
+import 'package:patients_list/app/patients_list/domain/blocs/patients_list_cubit.dart';
+import 'package:patients_list/app/patients_list/presentation/patients_list_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => PatientsListCubit(PatientsListRepository()),
       child: MaterialApp(
-        title: 'Anlix Patients',
+        title: 'Patients List',
         theme: ThemeData(
           primarySwatch: Colors.deepPurple,
         ),

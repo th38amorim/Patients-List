@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:teste_tecnico_anlix/app/patients_list/domain/blocs/patients_list_cubit.dart';
-import 'package:teste_tecnico_anlix/app/patients_list/domain/blocs/patients_list_state.dart';
-import 'package:teste_tecnico_anlix/app/patients_list/domain/entities/patient.dart';
-import 'package:teste_tecnico_anlix/app/patients_list/presentation/widgets/filter_dialog.dart';
-import 'package:teste_tecnico_anlix/app/patients_list/presentation/widgets/gender_filter_dialog.dart';
+import 'package:patients_list/app/patients_list/domain/blocs/patients_list_cubit.dart';
+import 'package:patients_list/app/patients_list/domain/blocs/patients_list_state.dart';
+import 'package:patients_list/app/patients_list/domain/entities/patient.dart';
+import 'package:patients_list/app/patients_list/presentation/widgets/filter_dialog.dart';
+import 'package:patients_list/app/patients_list/presentation/widgets/gender_filter_dialog.dart';
 
 class PatientListScreen extends StatefulWidget {
   const PatientListScreen({Key? key}) : super(key: key);

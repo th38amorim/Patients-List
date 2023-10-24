@@ -1,6 +1,6 @@
 {
-    "name": "teste_tecnico_anlix",
-    "short_name": "teste_tecnico_anlix",
+    "name": "patients_list",
+    "short_name": "patients_list",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
