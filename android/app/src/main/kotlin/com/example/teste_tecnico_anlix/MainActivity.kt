@@ -1,4 +1,4 @@
-package com.example.teste_tecnico_anlix
+package com.example.patients_list
 
 import io.flutter.embedding.android.FlutterActivity
 
