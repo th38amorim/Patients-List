@@ -9,7 +9,6 @@ class Patient {
   final String motherName;
   final String fatherName;
   final String email;
-  // final String password;
   final String cep;
   final String address;
   final int houseNumber;
@@ -34,7 +33,6 @@ class Patient {
     required this.motherName,
     required this.fatherName,
     required this.email,
-    // required this.password,
     required this.cep,
     required this.address,
     required this.houseNumber,
@@ -49,7 +47,7 @@ class Patient {
     required this.color,
   });
 
-  factory Patient.fromJson(Map<String, dynamic> json) {
+  factory Patient.fromMap(Map<String, dynamic> json) {
     return Patient(
       name: json['nome'],
       age: json['idade'],
@@ -61,7 +59,6 @@ class Patient {
       motherName: json['mae'],
       fatherName: json['pai'],
       email: json['email'],
-      // password: json['senha'],
       cep: json['cep'],
       address: json['endereco'],
       houseNumber: json['numero'],
@@ -77,9 +74,36 @@ class Patient {
     );
   }
 
-  static List<Patient> fromJsonList(List<dynamic> jsonList) {
+  static List<Patient> fromMapList(List<dynamic> jsonList) {
     return jsonList
-        .map((json) => Patient.fromJson(json as Map<String, dynamic>))
+        .map((json) => Patient.fromMap(json as Map<String, dynamic>))
         .toList();
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'Nome': name,
+      'Idade': age,
+      'CPF': cpf,
+      'RG': rg,
+      'Data de nascimento': birthDate,
+      'Gênero': gender,
+      'Signo do zodíaco': zodiacSign,
+      'Nome da mãe': motherName,
+      'Nome do pai': fatherName,
+      'Email': email,
+      'CEP': cep,
+      'Endereço': address,
+      'Número da casa': houseNumber,
+      'Bairro': neighborhood,
+      'Cidade': city,
+      'Estado': state,
+      'Telefone fixo': landlinePhone,
+      'Celular': mobilePhone,
+      'Altura': height,
+      'Peso': '$weight kg',
+      'Tipo sanguíneo': bloodType,
+      'Cor': color,
+    };
   }
 }

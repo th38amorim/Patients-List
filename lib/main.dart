@@ -5,10 +5,12 @@ import 'package:teste_tecnico_anlix/app/patients_list/domain/blocs/patients_list
 import 'package:teste_tecnico_anlix/app/patients_list/presentation/patients_list_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
